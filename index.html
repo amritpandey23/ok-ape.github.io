@@ -22,9 +22,9 @@
                     <img src="img/icons/baseline-arrow_forward-24px.svg" alt="">
                 </div>
                 <a href="#" class="nav-item">Home</a>
-                <a href="#" class="nav-item">About</a>
-                <a href="#" class="nav-item">Projects</a>
-                <a href="#" class="nav-item">Resume</a>
+                <a href="#about" class="nav-item">About</a>
+                <a href="#projects" class="nav-item">Projects</a>
+                <!-- <a href="#" class="nav-item">Resume</a> -->
                 <div class="sidenav-footer">
                     Contents of this site is released under Creative Commons
                     license.<br>Copyrights &copy; Amrit Pandey
@@ -33,10 +33,10 @@
         </div>
     </header>
 
-    <section class="top-about-sec">
+    <section class="top-about-sec" id="about">
         <div class="container">
             <div class="short-bio">
-                Hi y'all <i class="em em-man-raising-hand"></i> my name is Amrit,
+                Hey y'all <i class="em em-man-raising-hand"></i> my name is Amrit,
                 currently, I am a web developer in professional capacity however I
                 like to explore and learn every field of software engineering. Cuz' I <i class="em em-heart"></i>
                 it!
@@ -82,27 +82,49 @@
         </div> 
     </section>
 
-    <section class="sec project-sec">
+    <section class="sec project-sec" id="projects">
         <div class="container">
             <h1 class="sec-heading">Projects <i class="em em-desktop_computer"></i></h1>
             <div class="sec-description">
-                Here are some of the projects I've worked on, you can find more on <a href="https://github.com">github</a>
+                Here are some shiny <i class="em em-star2"></i> pieces of code that I've written, you can find more on <a href="https://github.com">github</a>
             </div>
             <div class="project-group">
-                <div class="project-card">
-                    <div class="project-title">ddg Advanced Search</div>
-                    <div class="project-description">
-                        A simple front wrapper for DuckDuckGo search engine
-                        to search with finer details.
-                    </div>
-                    <div class="project-action-buttons">
-                        <a href="#" class="action-button">Live</a>
-                        <a href="#" class="action-button">Source</a>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            Site built by Amrit himself <i class="em em-wink"></i>. Peep into the source code <a href="#">here</a>.
+            <a class="open-license-box" href="#">Licenses <i class="em em-memo"></i></a>. Warning: This page is not secure.
+        </div>
+    </footer>
+
+    <div class="overlay">
+        <div class="license-modal-window">
+            <h1>Licenses
+                <a href="#" class="close-modal-window-button">
+                    <img src="img/icons/baseline-close-24px.svg" alt="">
+                </a>
+            </h1>
+            
+            <ul class="license-list">
+                <li>
+                    <b>Flaticons Icons: <a href="https://profile.flaticon.com/license/free">Free License</a></b>
+                </li>
+                <li>
+                    <b>Google Icons</b>: <a href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache License 2.0</a>
+                </li>
+                <li>
+                    <b>Emoji-CSS</b>: <a href="https://github.com/afeld/emoji-css/blob/gh-pages/LICENSE.md">MIT License</a>
+                </li>
+                <li>
+                    <b>Content</b>: The content of this site is released under Creative Commons license.
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <script src="scripts/main.js"></script>
 </body>
