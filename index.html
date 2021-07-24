@@ -1,19 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Amrit Pandey</title>
-	<meta name="description" content="Hi, I am Amrit Pandey aka ok-ape. 
-	I am full stack web developer and devops engineer. This is my 
-	portfolio website." />
-	<link rel="stylesheet" href="src/css/normalize.min.css">
-	<link rel="stylesheet" href="src/css/emoji.css">
-	<link rel="stylesheet" href="src/css/main.css">
-  </head>
-  <body>
-	<h1>Hello, World!</h1>
-	<script src="src/js/jquery.min.js"></script>
-	<script src="src/js/main.js"></script>
-  </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amrit Pandey</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-header">
+        <div class="container">
+
+            <header>
+                <a href="#" id="brand">ok_<span>ape</span></a>
+                <label id="switch" class="switch">
+                    <input type="checkbox" onchange="toggleTheme()" id="slider">
+                    <span class="slider round"></span>
+                </label>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="#work" class="nav-item-link">Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-item-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-item-link">Blog</a>
+                    </li>
+                </ul>
+            </header>
+
+            <main class="header-hero">
+                <div class="hero-left">
+                    <p class="hero-text">
+                        <span class="hero-text-top">Hey, I'm <span class="hero-text-highlight">Amrit</span></span>
+                        <span class="hero-text-middle">a <span class="hero-text-highlight">full-stack</span>
+                            developer</span>
+                        <span class="hero-text-bottom">& CS student at <span
+                                class="hero-text-highlight">NITW</span></span>
+                    </p>
+                    <p class="hero-text-muted">
+                        Stick around to see my work.
+                    </p>
+                    <a href="#work" id="ctc-btn">See My Work</a>
+                </div>
+                <div class="hero-right">
+                    <div class="hero-img">
+                        <img src="img/undraw_Hello_re_3evm.svg" alt="">
+                    </div>
+                </div>
+            </main>
+        </div>
+
+    </div>
+
+    <div class="section about-section" id="about">
+        <div class="container">
+            <div class="about-right">
+                <div class="section-title">
+                    <span class="section-title-main"><span class="dash"></span>About</span>
+                    <span class="section-subtitle">Get a closer look at who I am.</span>
+                </div>
+
+                <div class="info-text-card">
+                    <div class="card-title">
+                        <span class="dash"></span>Skills & Tools
+                    </div>
+                    <div class="card-text">
+                        I've worked as full-stack Web Developer and know a thing or
+                        two about DevOps. My go-to stack has been Flask/Django + SQL + HTML5
+                        + CSS3 + JS. Also worked with C/C++ and Java.
+                    </div>
+                </div>
+
+                <div class="info-text-card">
+                    <div class="card-title">
+                        <span class="dash"></span>Who am I?
+                    </div>
+                    <div class="card-text">
+                        Been travelling on the path of web development journey for more than 3 years.
+                        Worked on open-source and freelance projects. Volunteered for 301DaysOfCode 
+                        movement on twitter. Currently persuing MCA from NIT, Warangal. Actively 
+                        looking for an internship opportunity.
+                    </div>
+                </div>
+            </div>
+
+            <!-- timeline -->
+            <div class="about-right">
+                <div class="timeline-container">
+                    <div class="timeline">
+                        <ul class="timeline-list">
+                            <li class="timeline-list-item">
+                                <div class="timeline-content">
+                                    <h4 class="date">December 2020 - Present</h4>
+                                    <h1>Master of Computer Application</h1>
+                                    <!-- <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, veniam?
+                                    </p> -->
+                                </div>
+                            </li>
+                            <li class="timeline-list-item">
+                                <div class="timeline-content">
+                                    <h4 class="date">June 2019 - January 2020</h4>
+                                    <h1>Freelance WebDev</h1>
+                                    <!-- <p>
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit, recusandae!
+                                    </p> -->
+                                </div>
+                            </li>
+                            <li class="timeline-list-item">
+                                <div class="timeline-content">
+                                    <h4 class="date">March 2017- May 2018</h4>
+                                    <h1>Full Stack Developer Degree</h1>
+                                    <!-- <p>
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, explicabo.
+                                    </p> -->
+                                </div>
+                            </li>
+                            <li class="timeline-list-item">
+                                <div class="timeline-content">
+                                    <h4 class="date">June 2015 - June 2019</h4>
+                                    <h1>B.E. Civil Engineering</h1>
+                                    <!-- <p>
+                                        lorem10
+                                    </p> -->
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container">
+            <a href="https://www.linkedin.com/in/okape/" id="ctc-btn" target="_blank">LinkedIn</a>
+            <a href="#" id="ctc-btn-muted">Download Resume</a>
+        </div>
+    </div>
+
+    <div class="section work-section" id="work">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-title-main"><span class="dash"></span>Work</span>
+                <span class="section-subtitle">
+                    A summary of my work I did in past
+                </span>
+            </div>
+            <div class="work-section-secondary-container">
+                <div class="info-text-card">
+                    <div class="card-title">
+                        <span class="dash"></span> Projects
+                    </div>
+                    <div class="project-caraousel">
+                        <div class="siema">
+                            <div class="project-card-container">
+                                <div class="project-card-text">
+                                    <div class="project-card-title">AmritReads</div>
+                                    <div class="project-card-links">
+                                        <a href="#" class="project-card-link">github</a>
+                                        <a href="#" class="project-card-link">demo</a>
+                                    </div>
+                                    <div class="project-card-about">
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto dolorum
+                                        dolore
+                                        odio
+                                        doloremque a mollitia omnis, recusandae expedita maxime necessitatibus.
+                                    </div>
+                                </div>
+                                <div class="project-card-img">
+                                    <img src="img/nature.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="project-card-container">
+                                <div class="project-card-text">
+                                    <div class="project-card-title">AmritReads</div>
+                                    <div class="project-card-links">
+                                        <a href="#" class="project-card-link">github</a>
+                                        <a href="#" class="project-card-link">demo</a>
+                                    </div>
+                                    <div class="project-card-about">
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto dolorum
+                                        dolore
+                                        odio
+                                        doloremque a mollitia omnis, recusandae expedita maxime necessitatibus.
+                                    </div>
+                                </div>
+                                <div class="project-card-img">
+                                    <img src="img/nature.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="project-card-container">
+                                <div class="project-card-text">
+                                    <div class="project-card-title">AmritReads</div>
+                                    <div class="project-card-links">
+                                        <a href="#" class="project-card-link">github</a>
+                                        <a href="#" class="project-card-link">demo</a>
+                                    </div>
+                                    <div class="project-card-about">
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto dolorum
+                                        dolore
+                                        odio
+                                        doloremque a mollitia omnis, recusandae expedita maxime necessitatibus.
+                                    </div>
+                                </div>
+                                <div class="project-card-img">
+                                    <img src="img/nature.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="prev"><i class="fas fa-arrow-left"></i></button>
+                            <button class="next"><i class="fas fa-arrow-right"></i></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-text-card">
+                    <div class="card-title">
+                        <span class="dash"></span>Articles
+                    </div>
+                    <ul class="article-list">
+                        <li>
+                            <a
+                                href="https://blog.codecareer.io/javascript-why-do-we-need-tests-cjwtjvaku004gjus1bjqw0b2t">[JavaScript]
+                                Why do we need tests?</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://okape.medium.com/what-go-programming-language-does-and-does-not-have-ed6a9f83ab2d">What
+                                Go Programming Language does and does not have</a>
+                        </li>
+                        <li>
+                            <a href="https://ap4tt.hashnode.dev/some-invaluable-tips-for-you-cjxc6gnu00042shs13hjyfkfk">Some
+                                invaluable tips for programmers.</a>
+                        </li>
+                        <li>
+                            <a href="https://dev.to/ok_ape/the-minimalist-terminal-setup-i5o">The Minimalist Terminal
+                                Setup</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://okape.medium.com/linux-is-not-the-name-of-operating-system-you-know-of-ed1fd3f3c63e">“Linux”
+                                is not the name of Operating System you know of!</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="info-text-card">
+                    <div class="card-title">
+                        <span class="dash"></span>Stacks
+                    </div>
+                    <ul class="stack-icons">
+                        <li><i class="fab fa-html5"></i></li>
+                        <li><i class="fab fa-css3"></i></li>
+                        <li><i class="fab fa-node"></i></li>
+                        <li><i class="fab fa-python"></i></li>
+                        <li><i class="fab fa-java"></i></li>
+                        <li><i class="fab fa-js"></i></li>
+                        <li><i class="fab fa-github"></i></li>
+                    </ul>
+                </div>
+
+                <div class="info-text-card">
+                    <div class="card-title">
+                        <span class="dash"></span>Achievements
+                    </div>
+                    <ul>
+                        <li>NIMCET 2020 All India Rank 129</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section connect-section" id="connect">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-title-main"><span class="dash"></span>Connect</span>
+                <span class="section-subtitle">Interested in working with me?</span>
+            </div>
+
+            <div class="info-text-card">
+                <div class="card-title">
+                    <span class="dash"></span>Social Handles
+                </div>
+                <div class="card-text">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">GitHub</a>
+                </div>
+            </div>
+
+            <div class="info-text-card">
+                <div class="card-title">
+                    <span class="dash"></span>Email
+                </div>
+                <div class="card-text">
+                    For queries regarding project, internships offers and work send
+                    me an email to <a href="mailto:amritpandey@tuta.io">amritpandey@tuta.io</a>. For
+                    work related casual chatting, send me a 👋 on <a href="#">Telegram</a>.
+                </div>
+            </div>
+
+            <footer class="main-footer">
+                &copy; Amrit Pandey
+            </footer>
+        </div>
+    </div>
+
+    <script src="js/siema.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
 </html>
