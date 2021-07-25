@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amrit Pandey</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-header">
+        <div class="container">
+
+            <header>
+                <a href="{{ url_for('home') }}" id="brand">ok_<span>ape</span></a>
+                <label id="switch" class="switch">
+                    <input type="checkbox" onchange="toggleTheme()" id="slider">
+                    <span class="slider round"></span>
+                </label>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="{{ url_for('home') }}#work" class="nav-item-link">Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('home') }}#about" class="nav-item-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('blog') }}" class="nav-item-link">Blog</a>
+                    </li>
+                </ul>
+            </header>
+
+            <main class="header-hero">
+                <div class="hero-left">
+                    <p class="hero-text">
+                        <span class="hero-text-top">Hey, I'm <span class="hero-text-highlight">Amrit</span></span>
+                        <span class="hero-text-middle">a <span class="hero-text-highlight">full-stack</span>
+                            developer</span>
+                        <span class="hero-text-bottom">& CS student at <span
+                                class="hero-text-highlight">NITW</span></span>
+                    </p>
+                    <p class="hero-text-muted">
+                        Stick around to see my work.
+                    </p>
+                    <a href="#work" id="ctc-btn">See My Work</a>
+                </div>
+                <div class="hero-right">
+                    <div class="hero-img">
+                        <img src="{{ url_for('static', filename='img/undraw_Hello_re_3evm.svg') }}" alt="">
+                    </div>
+                </div>
+            </main>
+        </div>
+
+    </div>
+
+    <div class="section about-section" id="about">
+        <div class="container">
+            <div class="about-right">
+                <div class="section-title">
+                    <span class="section-title-main"><span class="dash"></span>About</span>
+                    <span class="section-subtitle">Get a closer look at who I am.</span>
+                </div>
+
+                <div class="info-text-card">
+                    <div class="card-title">
+                        <span class="dash"></span>Skills & Tools
+                    </div>
+                    <div class="card-text">
+                        <!-- I've worked as full-stack Web Developer and know a thing or
+                        two about DevOps. My go-to stack has been Flask/Django + SQL + HTML5
+                        + CSS3 + JS. Also worked with C/C++ and Java. -->
+                        {{ data.skillsntools }}
+                    </div>
+                </div>
+
+                <div class="info-text-card">
+                    <div class="card-title">
+                        <span class="dash"></span>Who am I?
+                    </div>
+                    <div class="card-text">
+                        <!-- Been travelling on the path of web development journey for more than 3 years.
+                        Worked on open-source and freelance projects. Volunteered for 301DaysOfCode
+                        movement on twitter. Currently persuing MCA from NIT, Warangal. Actively
+                        looking for an internship opportunity. -->
+                        {{ data.whoami }}
+                    </div>
+                </div>
+            </div>
+
+            <!-- timeline -->
+            <div class="about-right">
+                <div class="timeline-container">
+                    <div class="timeline">
+                        <ul class="timeline-list">
+                            {% for t in data.timeline %}
+                            <li class="timeline-list-item">
+                                <div class="timeline-content">
+                                    <h4 class="date">{{ t.duration }}</h4>
+                                    <h1>{{ t.heading }}</h1>
+                                    <!-- <p></p> -->
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container">
+            <a href="{{ data.linkedin }}" id="ctc-btn" target="_blank">LinkedIn</a>
+            <a href="{{ data.resume }}" id="ctc-btn-muted">Download Resume</a>
+        </div>
+    </div>
+
+    <div class="section work-section" id="work">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-title-main"><span class="dash"></span>Work</span>
+                <span class="section-subtitle">
+                    A summary of my work I did in past
+                </span>
+            </div>
+            <div class="work-section-secondary-container">
+                <div class="info-text-card">
+                    <div class="card-title">
+                        <span class="dash"></span> Projects
+                    </div>
+                    <div class="project-caraousel">
+                        <div class="siema">
+                            {% for p in data.projects %}
+                            <div class="project-card-container">
+                                <div class="project-card-text">
+                                    <div class="project-card-title">{{ p.title }}</div>
+                                    <div class="project-card-links">
+                                        <a href="{{ p.github }}" class="project-card-link">github</a>
+                                        <a href="{{ p.demo }}" class="project-card-link">demo</a>
+                                    </div>
+                                    <div class="project-card-about">
+                                        {{ p.description }}
+                                    </div>
+                                </div>
+                                <div class="project-card-img">
+                                    <img src="{{ url_for('static', filename='img/'+ p.img_file) }}" alt="">
+                                </div>
+                            </div>
+                            {% endfor %}
+
+                            
+                        </div>
+                        <div class="action-buttons">
+                            <button class="prev"><i class="fas fa-arrow-left"></i></button>
+                            <button class="next"><i class="fas fa-arrow-right"></i></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-text-card">
+                    <div class="card-title">
+                        <span class="dash"></span>Articles
+                    </div>
+                    <ul class="article-list">
+                        {% for a in data.articles %}
+                        <li>
+                            <a href="{{ a.link }}">{{ a.title }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="info-text-card">
+                    <div class="card-title">
+                        <span class="dash"></span>Stacks
+                    </div>
+                    <ul class="stack-icons">
+                        {% for s in data.stacks %}
+                        <li><i class="fab fa-{{ s }}"></i></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="info-text-card">
+                    <div class="card-title">
+                        <span class="dash"></span>Achievements
+                    </div>
+                    <ul>
+                        {% for a in data.achievements %}
+                        <li>{{ a }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section connect-section" id="connect">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-title-main"><span class="dash"></span>Connect</span>
+                <span class="section-subtitle">Interested in working with me?</span>
+            </div>
+
+            <div class="info-text-card">
+                <div class="card-title">
+                    <span class="dash"></span>Social Handles
+                </div>
+                <div class="card-text">
+                    <a href="{{ data.linkedin }}">LinkedIn</a>
+                    <a href="{{ data.twitter }}">Twitter</a>
+                    <a href="{{ data.github }}">GitHub</a>
+                </div>
+            </div>
+
+            <div class="info-text-card">
+                <div class="card-title">
+                    <span class="dash"></span>Email
+                </div>
+                <div class="card-text">
+                    For queries regarding project, internships offers and work send
+                    me an email to <a href="mailto:{{ data.email }}">{{ data.email }}</a>. For
+                    work related casual chatting, send me a 👋 on <a href="{{ data.telegram }}">Telegram</a>.
+                </div>
+            </div>
+
+            <footer class="main-footer">
+                &copy; Amrit Pandey
+            </footer>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/siema.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+{
+    "app_secret": "6a90d1dd72196e6a26e1c1af07884b4",
+    "dev_port": 3030,
+    "static_url_path": "/static"
+}
