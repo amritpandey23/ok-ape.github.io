@@ -319,7 +319,7 @@ header {
   border: 1px solid var(--font-color);
   position: relative;
   margin-bottom: 50px;
-  max-width: 100px;
+  max-width: 140px;
 }
 
 .timeline-list-item:last-child {
@@ -330,6 +330,7 @@ header {
   font-size: 0.8rem;
   margin: 0;
   line-height: 1.3;
+  /* text-align: left; */
 }
 
 .timeline-content p {
@@ -359,15 +360,16 @@ header {
 }
 
 .timeline-list-item:nth-child(odd) {
+  /* text-align: left; */
   float: left;
   clear: right;
-  transform: translateX(-96px);
+  transform: translateX(-98px);
 }
 
 .timeline-list-item:nth-child(even) {
   float: right;
   clear: left;
-  transform: translateX(55px);
+  transform: translateX(60px);
 }
 
 .timeline-list-item::before {
