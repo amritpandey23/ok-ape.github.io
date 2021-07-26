@@ -19,3 +19,7 @@ def home():
 @app.route("/blog")
 def blog():
     return render_template("blog.html")
+
+
+from okape.errors.handlers import errors
+app.register_blueprint(errors)
