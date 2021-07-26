@@ -417,7 +417,7 @@ header {
 .project-card-container {
   display: flex;
   /* width: 100%; */
-  max-height: 230px;
+  max-height: 200px;
   background: var(--color-tertiary);
   /* border-radius: 20px; */
   overflow: hidden;
@@ -446,9 +446,9 @@ header {
   flex: 1.5;
 }
 
-.project-card-img img {
-  width: 100%;
-}
+/* .project-card-img img { */
+  /* width: 100%; */
+/* } */
 
 .action-buttons {
   display: flex;

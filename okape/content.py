@@ -1,4 +1,3 @@
-
 skillsntools = "I've worked as full-stack Web Developer and know a thing or two about DevOps. My go-to stack has been Flask/Django + SQL + HTML5 + CSS3 + JS. Also worked with C/C++ and Java."
 whoami = "Been travelling on the path of web development journey for more than 3 years. Worked on open-source and freelance projects. Volunteered for 301DaysOfCode movement on twitter. Currently persuing MCA from NIT, Warangal. Actively looking for an internship opportunity."
 timeline = [
@@ -15,23 +14,32 @@ twitter = "https://twitter.com/ok-ape"
 github = "https://github.com/ok-ape"
 telegram = "https://t.me/ok_ape"
 email = "amritpandey@tuta.io"
-resume = "https://drive.google.com/file/d/1PPpMl-I_89wW2fQvBBXI0zSc_IOkP0At/view?usp=sharing"
+resume = (
+    "https://drive.google.com/file/d/1PPpMl-I_89wW2fQvBBXI0zSc_IOkP0At/view?usp=sharing"
+)
 
 projects = [
     {
         "title": "AmritReads",
-        "github": "#",
+        "github": "https://github.com/ok-ape/AmritReads",
         "demo": "#",
-        "description": "",
+        "description": "A personalised Book Review app made in Flask. Inspired from GoodReads.",
         "img_file": "nature.jpg",
     },
     {
-        "title": "AmritReads",
-        "github": "#",
-        "demo": "#",
-        "description": "",
-        "img_file": "nature.jpg",
+        "title": "Scott",
+        "github": "https://github.com/ok-ape/scott",
+        "demo": "https://ok-ape.github.io/scott/",
+        "description": "A friendly chatbot assistant for Discord. Free and Open Source for everyone. ",
+        "img_file": "scott-logo-img.png",
     },
+    {
+        "title": "REST API Demo",
+        "github": "https://github.com/ok-ape/rest_app_node",
+        "demo": "#",
+        "description": "REST API with NodeJS, ExpressJS, MySQL, MongoDB, JWT Auth and GraphQL",
+        "img_file": "nodejs-logo-img.png",
+    }
 ]
 
 articles = [
