@@ -363,13 +363,13 @@ header {
   /* text-align: left; */
   float: left;
   clear: right;
-  transform: translateX(-98px);
+  transform: translateX(-99px);
 }
 
 .timeline-list-item:nth-child(even) {
   float: right;
   clear: left;
-  transform: translateX(60px);
+  transform: translateX(59px);
 }
 
 .timeline-list-item::before {
