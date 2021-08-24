@@ -1,6 +1,5 @@
 import json
-from flask import Flask, render_template
-from werkzeug.utils import send_from_directory
+from flask import Flask, render_template, redirect
 import okape.content
 
 with open("okape/config.json") as f:
@@ -16,10 +15,12 @@ app.config["DEV_PORT"] = _config["dev_port"]
 def home():
     return render_template("index.html", data=okape.content)
 
+
 @app.route("/blog")
 def blog():
-    return render_template("blog.html")
+    return redirect("https://blog.okape.co.in")
 
 
 from okape.errors.handlers import errors
+
 app.register_blueprint(errors)

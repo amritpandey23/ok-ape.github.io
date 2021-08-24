@@ -14,9 +14,7 @@ twitter = "https://twitter.com/ok-ape"
 github = "https://github.com/ok-ape"
 telegram = "https://t.me/ok_ape"
 email = "amritpandey@tuta.io"
-resume = (
-    "https://drive.google.com/file/d/1PPpMl-I_89wW2fQvBBXI0zSc_IOkP0At/view?usp=sharing"
-)
+resume = "https://www.linkedin.com/in/okape/"
 
 projects = [
     {
@@ -39,7 +37,7 @@ projects = [
         "demo": "#",
         "description": "REST API with NodeJS, ExpressJS, MySQL, MongoDB, JWT Auth and GraphQL",
         "img_file": "nodejs-logo-img.png",
-    }
+    },
 ]
 
 articles = [
