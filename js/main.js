@@ -11,6 +11,11 @@ function toggleTheme() {
     }
 }
 
+const themeToggler = document.getElementById('themeToggler');
+if (localStorage.getItem('theme') === 'theme-dark') {
+    themeToggler.checked = true;
+}
+
 if (localStorage.getItem('theme') === 'theme-dark') {
     setTheme('theme-dark');
 } else {
